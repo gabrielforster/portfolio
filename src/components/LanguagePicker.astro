@@ -6,6 +6,7 @@ const lang = getLangFromUrl(Astro.url);
 const translatePath = useTranslatedPath(lang);
 ---
 <ul>
+  <!-- TODO: change this to a flag select component -->
   {Object.entries(languages).map(([lang, label]) => (
     <li>
       <a href={translatePath("/", lang)}>{label}</a>
