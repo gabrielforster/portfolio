@@ -20,7 +20,8 @@ export function readingTime(html: string) {
   return `${readingTimeMinutes} min read`;
 }
 
-export function dateRange(startDate: Date, endDate?: Date | string): string {
+export function dateRange(start: string, endDate?: Date | string): string {
+  const startDate = new Date(start);
   const startMonth = startDate.toLocaleString("default", { month: "short" });
   const startYear = startDate.getFullYear().toString();
   let endMonth;
