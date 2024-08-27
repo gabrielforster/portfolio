@@ -71,6 +71,7 @@ const work = await Promise.all(
         <ul class="flex flex-col gap-4">
           {blog.map(post => (
             <li>
+              {/* @ts-expect-error - Idk how to type content source after "content" */}
               <ArrowCard entry={post} />
             </li>
           ))}
@@ -118,6 +119,7 @@ const work = await Promise.all(
         <ul class="flex flex-col gap-4">
           {projects.map(project => (
             <li>
+              {/* @ts-expect-error - Idk how to type content source after "content" */}
               <ArrowCard entry={project} />
             </li>
           ))}
