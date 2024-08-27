@@ -13,7 +13,7 @@ export const ui = {
     "component.backToTop": "Back to top",
   },
   pt: {
-    "header.work": "experiências",
+    "header.work": "carreira",
     "header.projects": "projetos",
     "component.backToTop": "Voltar ao topo",
   },

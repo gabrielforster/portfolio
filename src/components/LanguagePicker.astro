@@ -5,11 +5,16 @@ import { getLangFromUrl, useTranslatedPath } from "../i18n/utils";
 const lang = getLangFromUrl(Astro.url);
 const translatePath = useTranslatedPath(lang);
 ---
-<ul>
-  <!-- TODO: change this to a flag select component -->
+<ul class="flex space-x-2">
   {Object.entries(languages).map(([lang, label]) => (
     <li>
-      <a href={translatePath("/", lang)}>{label}</a>
+      <a href={translatePath("/", lang)}>
+        <img
+          class="h-6 w-8 transition-opacity duration-300 ease-in-out object-cover rounded hover:opacity-75"
+          src={lang === "en" ? "/usa.svg" : "/brazil.svg"}
+          alt={label}
+        />
+      </a>
     </li>
   ))}
 </ul>
