@@ -1,34 +1,43 @@
 ---
 import Container from "@components/Container.astro";
 import Link from "@components/Link.astro";
+import LanguagePicker from "@components/LanguagePicker.astro";
+
 import { SITE } from "@consts";
+
+import { getLangFromUrl, useTranslations, useTranslatedPath  } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
 ---
 
 <header>
   <Container>
     <div class="flex flex-wrap gap-y-2 justify-between">
-      <Link href="/" underline={false}>
+      <Link href={translatePath("/")} underline={false}>
         <div class="font-semibold">
           {SITE.NAME}
         </div>
       </Link>
       <nav class="flex gap-1">
-        <Link href="/blog">
+        <Link href={translatePath("blog")}>
           blog
         </Link>
         <span>
           {`/`}
         </span>
-        <Link href="/work">
-          work
+        <Link href={translatePath("work")}>
+          {t("header.work")}
         </Link>
         <span>
           {`/`}
         </span>
-        <Link href="/projects">
-          projects
+        <Link href={translatePath("projects")}>
+          {t("header.projects")}
         </Link>
       </nav>
+      <LanguagePicker />
     </div>
   </Container>
 </header>
