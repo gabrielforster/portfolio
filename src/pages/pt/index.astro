@@ -23,7 +23,6 @@ const projects = (await getCollection("pt-projects"))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
   .slice(0,SITE.NUM_PROJECTS_ON_HOMEPAGE);
 
-// @ts-expect-error - Idk how to type content source after "content"
 const allwork = (await getCollection("pt-work"))
   .sort((a, b) => new Date(b.data.dateStart).valueOf() - new Date(a.data.dateStart).valueOf())
   .slice(0,SITE.NUM_WORKS_ON_HOMEPAGE);
