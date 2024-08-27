@@ -6,8 +6,8 @@ import vercelStatic from "@astrojs/vercel/static";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://gabrielforster.github.io",
-  base: "portfolio",
+  // site: "https://gabrielforster.github.io",
+  base: "/",
   integrations: [mdx(), sitemap(), tailwind()],
   output: "static",
   adapter: vercelStatic()
