@@ -11,10 +11,12 @@ export const ui = {
     "header.work": "work",
     "header.projects": "projects",
     "component.backToTop": "Back to top",
+    "content.nothingHere": "Nothing to show here!",
   },
   pt: {
     "header.work": "carreira",
     "header.projects": "projetos",
     "component.backToTop": "Voltar ao topo",
+    "content.nothingHere": "Nada para mostrar aqui!",
   },
 } as const;
