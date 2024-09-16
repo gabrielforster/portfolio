@@ -25,6 +25,7 @@ const t = useTranslations(lang);
         {
           projects.map((project) => (
             <li>
+              {/*@ts-expect-error*/}
               <ArrowCard entry={project}/>
             </li>
           ))
